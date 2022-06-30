@@ -256,17 +256,17 @@ const Main = () => {
           </h2>
           <div className="kitchen-and-car__car-image">
             <h4 className="kitchen-and-car__car-title">Аренда авто</h4>
-            <a className="kitchen-and-car__car-link" href="">
+            <Link className="kitchen-and-car__car-link" to="/car-rent">
               Подробнее
-            </a>
+            </Link>
           </div>
         </article>
         <article className="kitchen-and-car__kitchen">
           <div className="kitchen-and-car__kitchen-image">
             <h4 className="kitchen-and-car__kitchen-title">Кухня Абхазии</h4>
-            <a className="kitchen-and-car__kitchen-link" href="">
+            <Link className="kitchen-and-car__kitchen-link" to="/cooking">
               Подробнее
-            </a>
+            </Link>
           </div>
         </article>
       </section>
