@@ -356,6 +356,7 @@ const CarRent = () => {
                 price="1 000₽ ден"
                 choiseText="Подробнее"
                 pigeonDroppings=""
+                link="/car-card"
               />
             </ul>
           </section>

@@ -3,7 +3,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Navigation from "../../components/Navigation/Navigation";
 import "./SentenceForm.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SentenceForm = () => {
   const [checkedButton, changeChecked] = useState(true);
@@ -112,7 +112,7 @@ const SentenceForm = () => {
             value="Отправить"
           ></input>
           <div className="form-body__checkbox-wrapper">
-            {checkedButton == true ? (
+            {checkedButton === true ? (
               <input
                 className="form-body__checkbox"
                 type="checkbox"

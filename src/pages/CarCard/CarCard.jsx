@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./CarCard.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import { Link } from "react-router-dom";
 import CardMap from "../../components/CardMap/CardMap";
 import CardNavigation from "../../components/CardNavigation/CardNavigation";
 import Navigation from "../../components/Navigation/Navigation";
@@ -249,9 +248,6 @@ const CalendarComponentData = {
 };
 
 const CarCard = () => {
-  {
-    /* Блок бронирования */
-  }
   const [calendarValue, onChangeCalendar] = useState(new Date());
   const [timeChoise, changeTime] = useState("12:00");
   const [timeChoise2, changeTime2] = useState("12:00");
@@ -301,28 +297,28 @@ const CarCard = () => {
   };
 
   const changeAdultNumbers = (operation) => {
-    if (operation == "+") {
+    if (operation === "+") {
       let some = adult + 1;
       changeAdult(some);
-    } else if (adult > 0 && operation == "-") {
+    } else if (adult > 0 && operation === "-") {
       let some = adult - 1;
       changeAdult(some);
     }
   };
   const changeChildrenNumbers = (operation) => {
-    if (operation == "+") {
+    if (operation === "+") {
       let some = children + 1;
       changeChildren(some);
-    } else if (children > 0 && operation == "-") {
+    } else if (children > 0 && operation === "-") {
       let some = children - 1;
       changeChildren(some);
     }
   };
   const changeBabiesNumbers = (operation) => {
-    if (operation == "+") {
+    if (operation === "+") {
       let some = babies + 1;
       changeBabies(some);
-    } else if (babies > 0 && operation == "-") {
+    } else if (babies > 0 && operation === "-") {
       let some = babies - 1;
       changeBabies(some);
     }
@@ -355,9 +351,6 @@ const CarCard = () => {
   const changeTimeLocal2 = (e) => {
     changeTime2(e.target.value);
   };
-  {
-    /* Блок регистрации */
-  }
 
   return (
     <div className="card-card">
@@ -418,6 +411,7 @@ const CarCard = () => {
                     src="../../../images/transfer/calendar.svg"
                     width="13.5"
                     height="15"
+                    alt="message"
                   />
                   <p className="transfer-booking__form-search transfer-booking__form-search--data transfer-booking__form-search--data--number-hotel-card ">
                     {ourDateInForm}
@@ -446,6 +440,7 @@ const CarCard = () => {
                     src="../../../images/transfer/calendar.svg"
                     width="13.5"
                     height="15"
+                    alt="right"
                   />
                   <p className="transfer-booking__form-search transfer-booking__form-search--data transfer-booking__form-search--data--number-hotel-card ">
                     {ourDateInForm2}
@@ -466,13 +461,14 @@ const CarCard = () => {
               <section className="reservation-time__wrapper">
                 <div className="transfer-booking__form-item transfer-booking__form-item--time">
                   <p className="transfer-booking__form-top-text">
-                    Вреямя забирать
+                    Время забирать
                   </p>
                   <img
                     className="transfer-booking__form-image transfer-booking__form-image--time"
                     src="../../images/transfer/timer.svg"
                     width="18"
                     height="18"
+                    alt="get it"
                   />
                   <input
                     className="transfer-booking__form-search transfer-booking__form-search--time"
@@ -504,6 +500,7 @@ const CarCard = () => {
                     src="../../images/transfer/timer.svg"
                     width="18"
                     height="18"
+                    alt="valia"
                   />
                   <input
                     className="transfer-booking__form-search transfer-booking__form-search--time"
@@ -535,6 +532,7 @@ const CarCard = () => {
                   src="../../images/transfer/person.svg"
                   width="11.25"
                   height="15.75"
+                  alt="vallet"
                 />
                 <input
                   className="transfer-booking__form-search"

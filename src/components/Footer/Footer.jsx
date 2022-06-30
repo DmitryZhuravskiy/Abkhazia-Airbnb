@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Footer.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Footer = ({ form }) => {
   const [checkedButton, changeChecked] = useState(true);
@@ -17,7 +17,7 @@ const Footer = ({ form }) => {
 
   return (
     <div className="footer">
-      {form == true ? (
+      {form === true ? (
         <></>
       ) : (
         <section className="footer__form">
@@ -49,7 +49,7 @@ const Footer = ({ form }) => {
             />
             <input
               className={
-                checkedButton == true
+                checkedButton === true
                   ? "form-body__submit"
                   : "form-body__submit form-body__submit--disabled "
               }
@@ -57,7 +57,7 @@ const Footer = ({ form }) => {
               value="Отправить"
             />
             <div className="form-body__checkbox-wrapper">
-              {checkedButton == true ? (
+              {checkedButton === true ? (
                 <input
                   className="form-body__checkbox"
                   type="checkbox"
@@ -101,7 +101,7 @@ const Footer = ({ form }) => {
             <img
               className="header__logo-image"
               src="../images/logo-color.svg"
-              alt="header-logo-image"
+              alt="header-logo"
               width="118"
               height="74"
             />
@@ -134,34 +134,34 @@ const Footer = ({ form }) => {
             <h5 className="link-list__rest-title">Отдых</h5>
             <ul className="link-list__rest-links">
               <li className="link-list__rest-item">
-                <a className="link-list__rest-item-link" href="#">
+                <Link className="link-list__rest-item-link" to="/housing-catalog">
                   Проживание
-                </a>
+                </Link>
               </li>
               <li className="link-list__rest-item">
-                <a className="link-list__rest-item-link" href="#">
+                <Link className="link-list__rest-item-link" to="/tours">
                   Эскурсии и впечатления
-                </a>
+                </Link>
               </li>
               <li className="link-list__rest-item">
-                <a className="link-list__rest-item-link" href="#">
+                <Link className="link-list__rest-item-link" to="/transfer">
                   Трансфер{" "}
-                </a>
+                </Link>
               </li>
               <li className="link-list__rest-item">
-                <a className="link-list__rest-item-link" href="#">
+                <Link className="link-list__rest-item-link" to="/car-rent">
                   Аренда авто
-                </a>
+                </Link>
               </li>
               <li className="link-list__rest-item">
-                <a className="link-list__rest-item-link" href="#">
+                <Link className="link-list__rest-item-link" to="/cooking">
                   Кухня Абхазии
-                </a>
+                </Link>
               </li>
               <li className="link-list__rest-item">
-                <a className="link-list__rest-item-link" href="#">
+                <Link className="link-list__rest-item-link" to="/cities">
                   Города Абхазии
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -181,14 +181,14 @@ const Footer = ({ form }) => {
               <li className="link-list__feedback-item">
                 <Link
                   className="link-list__feedback-item-link"
-                  to="/hotel-card"
+                  to="/"
                 >
                   Служба туристической заботы
                 </Link>
               </li>
               <li className="link-list__feedback-item">
                 <Link
-                  to="/town-card"
+                  to="/"
                   className="link-list__feedback-item-link"
                   href="#"
                 >
@@ -206,7 +206,7 @@ const Footer = ({ form }) => {
               </li>
               <li className="link-list__feedback-item">
                 <Link
-                  to="/sentence-for"
+                  to="/sentence-form"
                   className="link-list__feedback-item-link"
                 >
                   Форма для предложений
@@ -223,7 +223,7 @@ const Footer = ({ form }) => {
               className="copyright-list__item-link copyright-list__item-link--not-underline"
               href="#"
             >
-              © 2022 myapsny.ru
+              © 2022 abhazia-airbnb.net
             </a>
           </li>
           <li className="copyright-list__item">

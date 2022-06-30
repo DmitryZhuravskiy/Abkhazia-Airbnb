@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Cities.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -10,43 +10,43 @@ const TownArr = [
   {
     id: 0,
     town: "Гагра",
-    link: "gagra-link",
+    link: "/town-card",
     image: "../../images/cities/gagra.jpg",
   },
   {
     id: 1,
     town: "Новый Афон",
-    link: "new-afon-link",
+    link: "/town-card",
     image: "../../images/cities/new-afon.jpg",
   },
   {
     id: 2,
     town: "Гудаута",
-    link: "gudauta-link",
+    link: "/town-card",
     image: "../../images/cities/gudauta.jpg",
   },
   {
     id: 3,
     town: "Сухум",
-    link: "sukhum-link",
+    link: "/town-card",
     image: "../../images/cities/sukhum.jpg",
   },
   {
     id: 4,
     town: "Очамчира",
-    link: "ochamchira-link",
+    link: "/town-card",
     image: "../../images/cities/ochamchira.jpg",
   },
   {
     id: 5,
     town: "Пицунда",
-    link: "pitsunda-link",
+    link: "/town-card",
     image: "../../images/cities/pitsunda.jpg",
   },
   {
     id: 6,
     town: "Цандрыпш",
-    link: "tsandrypsh-link",
+    link: "/town-card",
     image: "../../images/cities/tsandrypsh.jpg",
   },
 ];
@@ -75,9 +75,9 @@ const Cities = () => {
           {TownArr.map((el) => (
             <li className={`cities__town-item box-${el.id + 1}`} key={el.id}>
               <h5 className="cities__town-name">{el.town}</h5>
-              <a className="cities__town-card-link" href={el.link}>
+              <Link className="cities__town-card-link" to={el.link}>
                 Подробнее
-              </a>
+              </Link>
               <img
                 className="cities__town-image"
                 src={el.image}
